@@ -1,12 +1,24 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-//import './App.css'
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+
+// Import pages
+import Home from "./pages/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const location = useLocation();
 
-  return <h1 className="text-3xl font-bold underline text-red-500">Hello world!</h1>;
+  useEffect(() => {
+    document.querySelector("html").style.scrollBehavior = "auto";
+    window.scroll({ top: 0 });
+    document.querySelector("html").style.scrollBehavior = "";
+  }, [location.pathname]); // triggered on route change
+
+  return (
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      {/*<Route path="*" element={<NotFound />} />*/}
+    </Routes>
+  );
 }
 
 export default App;
