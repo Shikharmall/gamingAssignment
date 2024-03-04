@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Header() {
   const [isHamburger, setIsHamburger] = useState(false);
@@ -21,6 +21,30 @@ export default function Header() {
   const handleMouseOut1 = () => {
     setIsShow1(false);
   };
+
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    // Add a scroll event listener to track the scroll position
+    const handleScroll = () => {
+      // You can adjust the scroll threshold according to your needs
+      const scrollThreshold = 200;
+
+      // Check if the user has scrolled beyond the threshold
+      const isScrolled = window.scrollY > scrollThreshold;
+
+      // Update the state to show/hide the button
+      setShowButton(isScrolled);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once on mount
 
   const moveTop = () => {
     window.scrollTo({
@@ -310,9 +334,11 @@ export default function Header() {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      c//lass="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
+                      c //lass="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
                       aria-hidden="true"
-                      className={`relative top-[1px] ml-1 h-3 w-3 transition duration-200 ${isShow0 ? '-rotate-180' : ''}`}
+                      className={`relative top-[1px] ml-1 h-3 w-3 transition duration-200 ${
+                        isShow0 ? "-rotate-180" : ""
+                      }`}
                     >
                       <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -491,7 +517,9 @@ export default function Header() {
                       stroke-linejoin="round"
                       //class="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
                       aria-hidden="true"
-                      className={`relative top-[1px] ml-1 h-3 w-3 transition duration-200 ${isShow1 ? '-rotate-180' : ''}`}
+                      className={`relative top-[1px] ml-1 h-3 w-3 transition duration-200 ${
+                        isShow1 ? "-rotate-180" : ""
+                      }`}
                     >
                       <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -1028,25 +1056,29 @@ export default function Header() {
           </div>
         </div>
       ) : (
-        <button
-          class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 py-2 fixed bottom-4 right-4 z-50 border px-2 shadow-lg opacity-100  bg-white"
-          onClick={() => moveTop()}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="w-6 h-6"
-          >
-            <polyline points="18 15 12 9 6 15"></polyline>
-          </svg>
-        </button>
+        <>
+          {showButton && (
+            <button
+              className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 py-2 fixed bottom-4 right-4 z-50 border px-2 shadow-lg opacity-100  bg-white"
+              onClick={moveTop}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-6 h-6"
+              >
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+            </button>
+          )}
+        </>
       )}
     </div>
   );
