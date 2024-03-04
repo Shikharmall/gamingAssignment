@@ -3,6 +3,28 @@ import React, { useState } from "react";
 export default function Header() {
   const [isHamburger, setIsHamburger] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+  const [isShow0, setIsShow0] = useState(false);
+  const [isShow1, setIsShow1] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsShow0(true);
+    // Add any additional logic or state changes you want to perform on mouse over
+  };
+
+  const handleMouseOut = () => {
+    setIsShow0(false);
+    // Add any additional logic or state changes you want to perform on mouse out
+  };
+
+  const handleMouseOver1 = () => {
+    setIsShow1(true);
+    // Add any additional logic or state changes you want to perform on mouse over
+  };
+
+  const handleMouseOut1 = () => {
+    setIsShow1(false);
+    // Add any additional logic or state changes you want to perform on mouse out
+  };
 
   return (
     <>
@@ -113,145 +135,155 @@ export default function Header() {
                   </a>
                 </li>
 
-                <div class="absolute left-0 top-full flex justify-center">
+                {isShow0 ? (
                   <div
-                    data-state="open"
-                    data-orientation="horizontal"
-                    class="origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]"
-                    //style="--radix-navigation-menu-viewport-width: 500px; --radix-navigation-menu-viewport-height: 406px;"
+                    class="absolute left-0 top-10 flex justify-center bg-white"
+                    onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
                     <div
-                      id="radix-:R9b6t5a:-content-radix-:Rdpb6t5a:"
-                      aria-labelledby="radix-:R9b6t5a:-trigger-radix-:Rdpb6t5a:"
+                      data-state="open"
                       data-orientation="horizontal"
-                      class="left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto"
-                      dir="ltr"
+                      class="origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]"
+                      style={{
+                        "--radix-navigation-menu-viewport-width": "500px",
+                        "--radix-navigation-menu-viewport-height": "406px",
+                      }}
                     >
-                      <ul class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                        <li class="row-span-4">
-                          <a
-                            class="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                            href="/"
-                            data-radix-collection-item=""
-                          >
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 250 105"
-                              version="1.1"
-                              xmlns="http://www.w3.org/2000/svg"
-                              xmlns:xlink="http://www.w3.org/1999/xlink"
-                              xml:space="preserve"
-                              class="h-8 w-12 fill-primary mb-2"
+                      <div
+                        id="radix-:R9b6t5a:-content-radix-:Rdpb6t5a:"
+                        aria-labelledby="radix-:R9b6t5a:-trigger-radix-:Rdpb6t5a:"
+                        data-orientation="horizontal"
+                        class="left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto"
+                        dir="ltr"
+                      >
+                        <ul class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                          <li class="row-span-4">
+                            <a
+                              class="flex h-full w-full select-none flex-col bg-[#f1f5f9] justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                              href="/"
+                              data-radix-collection-item=""
                             >
-                              <g transform="matrix(1,0,0,1,-65.8028,-149.894)">
-                                <g transform="matrix(1,0,0,1,-19.866,1.806)">
-                                  <g>
-                                    <g transform="matrix(1,5.53089e-19,0,1,-16.1128,120.811)">
-                                      <g transform="matrix(120,0,0,120,90.734,118.949)">
-                                        <path
-                                          d="M0.098,0.106C0.098,0.106 0.307,0.106 0.307,0.106C0.307,0.106 0.323,0.019 0.323,0.019C0.323,0.019 0.21,0.019 0.21,0.019C0.253,-0.21 0.295,-0.44 0.338,-0.669C0.338,-0.669 0.451,-0.669 0.451,-0.669C0.451,-0.669 0.466,-0.758 0.466,-0.758C0.466,-0.758 0.257,-0.758 0.257,-0.758C0.252,-0.478 0.149,-0.169 0.098,0.106Z"
-                                          //style="fill-rule: nonzero;"
-                                        ></path>
+                              <svg
+                                width="100%"
+                                height="100%"
+                                viewBox="0 0 250 105"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xml:space="preserve"
+                                class="h-8 w-12 fill-primary mb-2"
+                              >
+                                <g transform="matrix(1,0,0,1,-65.8028,-149.894)">
+                                  <g transform="matrix(1,0,0,1,-19.866,1.806)">
+                                    <g>
+                                      <g transform="matrix(1,5.53089e-19,0,1,-16.1128,120.811)">
+                                        <g transform="matrix(120,0,0,120,90.734,118.949)">
+                                          <path
+                                            d="M0.098,0.106C0.098,0.106 0.307,0.106 0.307,0.106C0.307,0.106 0.323,0.019 0.323,0.019C0.323,0.019 0.21,0.019 0.21,0.019C0.253,-0.21 0.295,-0.44 0.338,-0.669C0.338,-0.669 0.451,-0.669 0.451,-0.669C0.451,-0.669 0.466,-0.758 0.466,-0.758C0.466,-0.758 0.257,-0.758 0.257,-0.758C0.252,-0.478 0.149,-0.169 0.098,0.106Z"
+                                            style={{ fillRule: "nonzero" }}
+                                          ></path>
+                                        </g>
+                                        <g transform="matrix(120,0,0,120,298.574,118.949)">
+                                          <path
+                                            d="M0.068,0.106C0.068,0.106 0.277,0.106 0.277,0.106C0.328,-0.169 0.431,-0.478 0.436,-0.758C0.436,-0.758 0.227,-0.758 0.227,-0.758C0.227,-0.758 0.212,-0.669 0.212,-0.669C0.212,-0.669 0.325,-0.669 0.325,-0.669C0.282,-0.44 0.24,-0.21 0.197,0.019C0.197,0.019 0.084,0.019 0.084,0.019C0.084,0.019 0.068,0.106 0.068,0.106Z"
+                                            style={{ fillRule: "nonzero" }}
+                                          ></path>
+                                        </g>
                                       </g>
-                                      <g transform="matrix(120,0,0,120,298.574,118.949)">
-                                        <path
-                                          d="M0.068,0.106C0.068,0.106 0.277,0.106 0.277,0.106C0.328,-0.169 0.431,-0.478 0.436,-0.758C0.436,-0.758 0.227,-0.758 0.227,-0.758C0.227,-0.758 0.212,-0.669 0.212,-0.669C0.212,-0.669 0.325,-0.669 0.325,-0.669C0.282,-0.44 0.24,-0.21 0.197,0.019C0.197,0.019 0.084,0.019 0.084,0.019C0.084,0.019 0.068,0.106 0.068,0.106Z"
-                                          //style="fill-rule: nonzero;"
-                                        ></path>
-                                      </g>
-                                    </g>
-                                    <g transform="matrix(0.999991,0.00421493,0,1.00001,23.1081,118.221)">
-                                      <g transform="matrix(110,0,0,110,90.734,111.65)">
-                                        <path
-                                          d="M0.074,0.002C0.074,0.002 0.497,0.002 0.497,0.002C0.497,0.002 0.521,-0.127 0.521,-0.127C0.521,-0.127 0.287,-0.127 0.287,-0.127C0.287,-0.127 0.569,-0.428 0.569,-0.428C0.569,-0.428 0.589,-0.534 0.589,-0.534C0.589,-0.534 0.18,-0.534 0.18,-0.534C0.18,-0.534 0.156,-0.406 0.156,-0.406C0.156,-0.406 0.375,-0.406 0.375,-0.406C0.375,-0.406 0.094,-0.107 0.094,-0.107C0.094,-0.107 0.074,0.002 0.074,0.002Z"
-                                          //style="fill-rule: nonzero;"
-                                        ></path>
-                                      </g>
-                                      <g transform="matrix(110,0,0,110,141.994,111.65)">
-                                        <path
-                                          d="M0.224,0.006C0.295,0.006 0.356,-0.023 0.404,-0.075C0.404,-0.075 0.39,0.002 0.39,0.002C0.39,0.002 0.542,0.002 0.542,0.002C0.542,0.002 0.617,-0.406 0.617,-0.406C0.632,-0.487 0.595,-0.534 0.512,-0.534C0.512,-0.534 0.323,-0.534 0.323,-0.534C0.24,-0.534 0.186,-0.488 0.171,-0.406C0.171,-0.406 0.163,-0.362 0.163,-0.362C0.163,-0.362 0.318,-0.362 0.318,-0.362L0.324,-0.392C0.327,-0.406 0.335,-0.413 0.349,-0.413C0.349,-0.413 0.441,-0.413 0.441,-0.413C0.455,-0.413 0.461,-0.406 0.458,-0.392C0.458,-0.392 0.446,-0.328 0.446,-0.328C0.39,-0.325 0.334,-0.321 0.278,-0.313C0.179,-0.299 0.125,-0.254 0.106,-0.154C0.088,-0.056 0.117,0.006 0.224,0.006ZM0.288,-0.116C0.257,-0.116 0.261,-0.143 0.265,-0.167C0.27,-0.194 0.278,-0.212 0.306,-0.218C0.306,-0.218 0.43,-0.24 0.43,-0.24C0.43,-0.24 0.414,-0.155 0.414,-0.155C0.374,-0.135 0.334,-0.116 0.288,-0.116Z"
-                                          //style="fill-rule: nonzero;"
-                                        ></path>
-                                      </g>
-                                      <g transform="matrix(110,0,0,110,201.724,111.65)">
-                                        <path
-                                          d="M0.073,0.16C0.073,0.16 0.23,0.16 0.23,0.16C0.23,0.16 0.273,-0.07 0.273,-0.07C0.306,-0.012 0.36,0.007 0.425,0.007C0.52,0.007 0.583,-0.03 0.6,-0.126C0.6,-0.126 0.652,-0.406 0.652,-0.406C0.67,-0.502 0.619,-0.539 0.526,-0.539C0.454,-0.539 0.395,-0.515 0.346,-0.464C0.346,-0.464 0.359,-0.534 0.359,-0.534C0.359,-0.534 0.201,-0.534 0.201,-0.534C0.158,-0.303 0.116,-0.071 0.073,0.16ZM0.405,-0.125C0.363,-0.125 0.325,-0.134 0.289,-0.155C0.289,-0.155 0.33,-0.378 0.33,-0.378C0.37,-0.398 0.412,-0.407 0.457,-0.407C0.479,-0.407 0.494,-0.405 0.49,-0.382C0.49,-0.382 0.447,-0.151 0.447,-0.151C0.443,-0.128 0.427,-0.125 0.405,-0.125Z"
-                                          //style="fill-rule: nonzero;"
-                                        ></path>
+                                      <g transform="matrix(0.999991,0.00421493,0,1.00001,23.1081,118.221)">
+                                        <g transform="matrix(110,0,0,110,90.734,111.65)">
+                                          <path
+                                            d="M0.074,0.002C0.074,0.002 0.497,0.002 0.497,0.002C0.497,0.002 0.521,-0.127 0.521,-0.127C0.521,-0.127 0.287,-0.127 0.287,-0.127C0.287,-0.127 0.569,-0.428 0.569,-0.428C0.569,-0.428 0.589,-0.534 0.589,-0.534C0.589,-0.534 0.18,-0.534 0.18,-0.534C0.18,-0.534 0.156,-0.406 0.156,-0.406C0.156,-0.406 0.375,-0.406 0.375,-0.406C0.375,-0.406 0.094,-0.107 0.094,-0.107C0.094,-0.107 0.074,0.002 0.074,0.002Z"
+                                            style={{ fillRule: "nonzero" }}
+                                          ></path>
+                                        </g>
+                                        <g transform="matrix(110,0,0,110,141.994,111.65)">
+                                          <path
+                                            d="M0.224,0.006C0.295,0.006 0.356,-0.023 0.404,-0.075C0.404,-0.075 0.39,0.002 0.39,0.002C0.39,0.002 0.542,0.002 0.542,0.002C0.542,0.002 0.617,-0.406 0.617,-0.406C0.632,-0.487 0.595,-0.534 0.512,-0.534C0.512,-0.534 0.323,-0.534 0.323,-0.534C0.24,-0.534 0.186,-0.488 0.171,-0.406C0.171,-0.406 0.163,-0.362 0.163,-0.362C0.163,-0.362 0.318,-0.362 0.318,-0.362L0.324,-0.392C0.327,-0.406 0.335,-0.413 0.349,-0.413C0.349,-0.413 0.441,-0.413 0.441,-0.413C0.455,-0.413 0.461,-0.406 0.458,-0.392C0.458,-0.392 0.446,-0.328 0.446,-0.328C0.39,-0.325 0.334,-0.321 0.278,-0.313C0.179,-0.299 0.125,-0.254 0.106,-0.154C0.088,-0.056 0.117,0.006 0.224,0.006ZM0.288,-0.116C0.257,-0.116 0.261,-0.143 0.265,-0.167C0.27,-0.194 0.278,-0.212 0.306,-0.218C0.306,-0.218 0.43,-0.24 0.43,-0.24C0.43,-0.24 0.414,-0.155 0.414,-0.155C0.374,-0.135 0.334,-0.116 0.288,-0.116Z"
+                                            style={{ fillRule: "nonzero" }}
+                                          ></path>
+                                        </g>
+                                        <g transform="matrix(110,0,0,110,201.724,111.65)">
+                                          <path
+                                            d="M0.073,0.16C0.073,0.16 0.23,0.16 0.23,0.16C0.23,0.16 0.273,-0.07 0.273,-0.07C0.306,-0.012 0.36,0.007 0.425,0.007C0.52,0.007 0.583,-0.03 0.6,-0.126C0.6,-0.126 0.652,-0.406 0.652,-0.406C0.67,-0.502 0.619,-0.539 0.526,-0.539C0.454,-0.539 0.395,-0.515 0.346,-0.464C0.346,-0.464 0.359,-0.534 0.359,-0.534C0.359,-0.534 0.201,-0.534 0.201,-0.534C0.158,-0.303 0.116,-0.071 0.073,0.16ZM0.405,-0.125C0.363,-0.125 0.325,-0.134 0.289,-0.155C0.289,-0.155 0.33,-0.378 0.33,-0.378C0.37,-0.398 0.412,-0.407 0.457,-0.407C0.479,-0.407 0.494,-0.405 0.49,-0.382C0.49,-0.382 0.447,-0.151 0.447,-0.151C0.443,-0.128 0.427,-0.125 0.405,-0.125Z"
+                                            style={{ fillRule: "nonzero" }}
+                                          ></path>
+                                        </g>
                                       </g>
                                     </g>
                                   </g>
                                 </g>
-                              </g>
-                            </svg>
-                            <p class="text-sm leading-tight text-muted-foreground">
-                              The worlds leading trading platform for Roblox
-                              players.
-                            </p>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            href="/games"
-                            data-radix-collection-item=""
-                          >
-                            <div class="text-sm font-medium leading-none">
-                              Games
-                            </div>
-                            <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              See all games we support and find trades for them.
-                            </p>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            href="/tutorial"
-                            data-radix-collection-item=""
-                          >
-                            <div class="text-sm font-medium leading-none">
-                              Guide
-                            </div>
-                            <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Learn how to use the site and trade like a pro.
-                            </p>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            href="/search"
-                            data-radix-collection-item=""
-                          >
-                            <div class="text-sm font-medium leading-none">
-                              Search
-                            </div>
-                            <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Search for items and filter them by rarity, type,
-                              and more.
-                            </p>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            href="https://blog.zap.gg"
-                            data-radix-collection-item=""
-                          >
-                            <div class="text-sm font-medium leading-none">
-                              Blog
-                            </div>
-                            <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Read the latest news and updates from Zap.
-                            </p>
-                          </a>
-                        </li>
-                      </ul>
+                              </svg>
+                              <p class="text-sm leading-tight text-muted-foreground">
+                                The worlds leading trading platform for Roblox
+                                players.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/games"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Games
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                See all games we support and find trades for
+                                them.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/tutorial"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Guide
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Learn how to use the site and trade like a pro.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/search"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Search
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Search for items and filter them by rarity,
+                                type, and more.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="https://blog.zap.gg"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Blog
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Read the latest news and updates from Zap.
+                              </p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ) : null}
 
                 <li>
                   <button
@@ -261,6 +293,8 @@ export default function Header() {
                     aria-controls="radix-:R9b6t5a:-content-radix-:Rdpb6t5a:"
                     class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group"
                     data-radix-collection-item=""
+                    onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                   >
                     Trade{" "}
                     <svg
@@ -280,6 +314,155 @@ export default function Header() {
                     </svg>
                   </button>
                 </li>
+
+                {isShow1 ? (
+                  <div
+                    class="absolute left-0 top-10 flex justify-center bg-white"
+                    onMouseOver={handleMouseOver1}
+                    onMouseOut={handleMouseOut1}
+                  >
+                    <div
+                      data-state="open"
+                      data-orientation="horizontal"
+                      class="origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]"
+                      style={{
+                        "--radix-navigation-menu-viewport-width": "600px",
+                        "--radix-navigation-menu-viewport-height": "390px",
+                      }}
+                    >
+                      <div
+                        id="radix-:R9b6t5a:-content-radix-:Rhpb6t5a:"
+                        aria-labelledby="radix-:R9b6t5a:-trigger-radix-:Rhpb6t5a:"
+                        data-orientation="horizontal"
+                        class="left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto"
+                        dir="ltr"
+                      >
+                        <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/leaderboard"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Leaderboard
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                See the top traders on Zap.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/blox-fruits-stock"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Blox Fruits Stock
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                See the current Blox Fruits stock and a
+                                countdown until the next stock.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/trade"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Recent Trades
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                View the latest trades posted by other Zap
+                                users.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/games"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Games
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                See all games we support and find trades for
+                                them.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/search"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Search
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Search for items and filter them by rarity,
+                                type, and more.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/private-servers"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Free Private Servers
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Use our official private servers to trade with
+                                other users safely.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/faq"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                FAQ
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Find answers to common questions about Zap and
+                                trading.
+                              </p>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              href="/sponsors"
+                              data-radix-collection-item=""
+                            >
+                              <div class="text-sm font-medium leading-none">
+                                Sponsorships
+                              </div>
+                              <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                Get sponsored by Zap and earn some extra cash
+                                for your videos.
+                              </p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
+
                 <li>
                   <button
                     id="radix-:R9b6t5a:-trigger-radix-:Rhpb6t5a:"
@@ -288,6 +471,8 @@ export default function Header() {
                     aria-controls="radix-:R9b6t5a:-content-radix-:Rhpb6t5a:"
                     class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group"
                     data-radix-collection-item=""
+                    onMouseOver={handleMouseOver1}
+                    onMouseOut={handleMouseOut1}
                   >
                     Tools{" "}
                     <svg
@@ -307,6 +492,7 @@ export default function Header() {
                     </svg>
                   </button>
                 </li>
+
                 <li>
                   <a
                     class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-[#f1f5f9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
@@ -711,7 +897,7 @@ export default function Header() {
       </div>
 
       {isLogin ? (
-        <div class="fixed inset-0 z-50 flex justify-center items-center">
+        <div class={`fixed inset-0 z-50 flex justify-center items-center`}>
           <div
             data-state="open"
             class="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-all duration-100 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in"
@@ -725,7 +911,9 @@ export default function Header() {
             aria-describedby="radix-:r5:"
             aria-labelledby="radix-:r4:"
             data-state="open"
-            class="fixed z-50 gap-4 rounded-b-lg border bg-background p-6 shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0 h-screen w-screen sm:h-auto sm:w-auto md:mt-20 flex flex-col items-center justify-center bg-white"
+            className={`fixed z-50 gap-4 rounded-b-lg border bg-background p-6 shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0 h-screen w-screen sm:h-auto sm:w-auto md:mt-20 flex flex-col items-center justify-center bg-white transition-transform transform ${
+              isLogin ? "scale-100" : "scale-0"
+            }`}
             tabindex="-1"
             style={{ pointerEvents: "auto" }}
           >
@@ -835,7 +1023,6 @@ export default function Header() {
           </div>
         </div>
       ) : null}
-      
     </>
   );
 }
