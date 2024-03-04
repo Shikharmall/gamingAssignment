@@ -9,6 +9,7 @@ import TradeFaster from "../components/TradeFaster";
 import BoostTrade from "../components/BoostTrade";
 
 export default function Home() {
+  
   return (
     <>
       <Header />
@@ -19,6 +20,7 @@ export default function Home() {
       <RecentTrades />
       <FrequentQuestions />
       <Footer />
+
     </>
   );
 }

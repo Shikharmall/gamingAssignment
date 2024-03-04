@@ -8,26 +8,29 @@ export default function Header() {
 
   const handleMouseOver = () => {
     setIsShow0(true);
-    // Add any additional logic or state changes you want to perform on mouse over
   };
 
   const handleMouseOut = () => {
     setIsShow0(false);
-    // Add any additional logic or state changes you want to perform on mouse out
   };
 
   const handleMouseOver1 = () => {
     setIsShow1(true);
-    // Add any additional logic or state changes you want to perform on mouse over
   };
 
   const handleMouseOut1 = () => {
     setIsShow1(false);
-    // Add any additional logic or state changes you want to perform on mouse out
+  };
+
+  const moveTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // for smooth scrolling
+    });
   };
 
   return (
-    <>
+    <div className="sticky top-0 z-40 w-full bg-white">
       <div className=" flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 mx-20">
         <div class="flex items-center justify-start gap-x-2 sm:gap-x-0">
           <button
@@ -1022,7 +1025,27 @@ export default function Header() {
             </button>
           </div>
         </div>
-      ) : null}
-    </>
+      ) : (
+        <button
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 py-2 fixed bottom-4 right-4 z-50 border px-2 shadow-lg opacity-100  bg-white"
+          onClick={() => moveTop()}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6"
+          >
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      )}
+    </div>
   );
 }
