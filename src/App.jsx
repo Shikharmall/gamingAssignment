@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 // Import pages
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const location = useLocation();
@@ -16,7 +17,7 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      {/*<Route path="*" element={<NotFound />} />*/}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

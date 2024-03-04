@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/*<SubHeading1 />*/}
+      <SubHeading1 />
       <BoostTrade />
       <SupportedGame />
       <TradeFaster />
