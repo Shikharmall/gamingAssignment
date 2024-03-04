@@ -19,7 +19,8 @@ export default function FrequentQuestions() {
           and we'll get back to you as soon as we can.
         </p>
       </div>
-      <div className="mt-20 lg:max-w-4xl mx-auto">
+      
+      {/*<div className="mt-20 lg:max-w-4xl mx-auto">
         <div data-orientation="vertical">
           <div
             data-state="closed"
@@ -116,7 +117,12 @@ export default function FrequentQuestions() {
               aria-labelledby="radix-:R2mnjmt5a:"
               data-orientation="vertical"
               className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-              //style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"
+              style={{
+                "--radix-accordion-content-height":
+                  "var(--radix-collapsible-content-height)",
+                "--radix-accordion-content-width":
+                  "var(--radix-collapsible-content-width)",
+              }}
             ></div>
           </div>
         </div>
@@ -166,7 +172,12 @@ export default function FrequentQuestions() {
               aria-labelledby="radix-:R3mnjmt5a:"
               data-orientation="vertical"
               className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-              //style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"
+              style={{
+                "--radix-accordion-content-height":
+                  "var(--radix-collapsible-content-height)",
+                "--radix-accordion-content-width":
+                  "var(--radix-collapsible-content-width)",
+              }}
             ></div>
           </div>
         </div>
@@ -216,7 +227,12 @@ export default function FrequentQuestions() {
               aria-labelledby="radix-:R4mnjmt5a:"
               data-orientation="vertical"
               className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-              //style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"
+              style={{
+                "--radix-accordion-content-height":
+                  "var(--radix-collapsible-content-height)",
+                "--radix-accordion-content-width":
+                  "var(--radix-collapsible-content-width)",
+              }}
             ></div>
           </div>
         </div>
@@ -266,7 +282,12 @@ export default function FrequentQuestions() {
               aria-labelledby="radix-:R5mnjmt5a:"
               data-orientation="vertical"
               className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-              //style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"
+              style={{
+                "--radix-accordion-content-height":
+                  "var(--radix-collapsible-content-height)",
+                "--radix-accordion-content-width":
+                  "var(--radix-collapsible-content-width)",
+              }}
             ></div>
           </div>
         </div>
@@ -316,7 +337,12 @@ export default function FrequentQuestions() {
               aria-labelledby="radix-:R6mnjmt5a:"
               data-orientation="vertical"
               className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-              //style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"
+              style={{
+                "--radix-accordion-content-height":
+                  "var(--radix-collapsible-content-height)",
+                "--radix-accordion-content-width":
+                  "var(--radix-collapsible-content-width)",
+              }}
             ></div>
           </div>
         </div>
@@ -366,7 +392,12 @@ export default function FrequentQuestions() {
               aria-labelledby="radix-:R7mnjmt5a:"
               data-orientation="vertical"
               className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-              //style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"
+              style={{
+                "--radix-accordion-content-height":
+                  "var(--radix-collapsible-content-height)",
+                "--radix-accordion-content-width":
+                  "var(--radix-collapsible-content-width)",
+              }}
             ></div>
           </div>
         </div>
@@ -416,11 +447,336 @@ export default function FrequentQuestions() {
               aria-labelledby="radix-:R8mnjmt5a:"
               data-orientation="vertical"
               className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-              //style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);"
+              style={{
+                "--radix-accordion-content-height":
+                  "var(--radix-collapsible-content-height)",
+                "--radix-accordion-content-width":
+                  "var(--radix-collapsible-content-width)",
+              }}
             ></div>
           </div>
         </div>
+        <div
+          data-state="open"
+          data-orientation="vertical"
+          class="border-b py-4"
+        >
+          <h3 data-orientation="vertical" data-state="open" class="flex">
+            <button
+              type="button"
+              aria-controls="radix-:Rnmnjmt5a:"
+              aria-expanded="true"
+              data-state="open"
+              data-orientation="vertical"
+              id="radix-:R7mnjmt5a:"
+              class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left"
+              data-radix-collection-item=""
+            >
+              Are sponsorships available?
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4 shrink-0 transition-transform duration-200"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </h3>
+          <div
+            data-state="open"
+            id="radix-:Rnmnjmt5a:"
+            role="region"
+            aria-labelledby="radix-:R7mnjmt5a:"
+            data-orientation="vertical"
+            class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+            style={{
+              "--radix-accordion-content-height":
+                "var(--radix-collapsible-content-height)",
+              "--radix-accordion-content-width":
+                "var(--radix-collapsible-content-width)",
+            }}
+          >
+            <div class="pb-4 pt-0">
+              <p class="text-base leading-7 text-foreground">
+                Yes, we are currently looking for sponsors. If you are
+                interested in sponsoring Zap, please join our Discord server and
+                contact one of our staff members or use the sponsorship form on
+                our website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>*/}
+
+      <div class="mt-20 lg:max-w-4xl mx-auto">
+        <div
+          class="group flex flex-col gap-2 rounded-lg bg-white p-5 text-black border-b py-4"
+          tabindex="1"
+        >
+          <div class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left cursor-pointer">
+            <span> What's this site for? </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180 "
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5 transition-all duration-500 group-focus:-rotate-180"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+            Zap was built to help make it easier for Roblox players to trade
+            with each other. We noticed that there was a lack of good trading
+            sites for Roblox, so we decided to build one ourselves.
+          </div>
+        </div>
+
+        <div
+          class="group flex flex-col gap-2 rounded-lg bg-white p-5 text-black border-b py-4"
+          tabindex="2"
+        >
+          <div class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left cursor-pointer">
+            <span> How do you post a trade? </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180 "
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5 transition-all duration-500 group-focus:-rotate-180"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+            Posting a trade is super simple! Just click the 'Arrows' button in
+            the top right corner of the page. You will be asked to sign in with
+            your Roblox account if you aren't already. Once you sign in, you
+            will be able to pick a game and post a trade.
+          </div>
+        </div>
+
+        <div
+          class="group flex flex-col gap-2 rounded-lg bg-white p-5 text-black border-b py-4"
+          tabindex="3"
+        >
+          <div class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left cursor-pointer">
+            <span> Why isn't X game supported? </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180 "
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5 transition-all duration-500 group-focus:-rotate-180"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+            We prefer quality over quantity. We are working on adding more
+            games, but we want to make sure that the games we add are supported
+            well first. If you have a game that you would like to see added,
+            please let us know.
+          </div>
+        </div>
+
+        <div
+          class="group flex flex-col gap-2 rounded-lg bg-white p-5 text-black border-b py-4"
+          tabindex="4"
+        >
+          <div class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left cursor-pointer">
+            <span> Does this site steal your Roblox account? </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180 "
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5 transition-all duration-500 group-focus:-rotate-180"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+            Nope! We don't ask for your Roblox password. We use Roblox's
+            official authentication system to link your account to Zap.
+          </div>
+        </div>
+
+        <div
+          class="group flex flex-col gap-2 rounded-lg bg-white p-5 text-black border-b py-4"
+          tabindex="5"
+        >
+          <div class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left cursor-pointer">
+            <span> Does Zap have a mobile app? </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180 "
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5 transition-all duration-500 group-focus:-rotate-180"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+            Not yet, but we will have one soon! We are working on a mobile app
+            for Zap that will be available on iOS and Android in the coming
+            months.
+          </div>
+        </div>
+
+        <div
+          class="group flex flex-col gap-2 rounded-lg bg-white p-5 text-black border-b py-4"
+          tabindex="6"
+        >
+          <div class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left cursor-pointer">
+            <span>
+              {" "}
+              An item has the wrong thumbnail, description, etc. What do I do?{" "}
+            </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180 "
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5 transition-all duration-500 group-focus:-rotate-180"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+            If you see an item with incorrect data, please let us know by
+            joining our Discord server. We will fix the issue as soon as
+            possible.
+          </div>
+        </div>
+
+        <div
+          class="group flex flex-col gap-2 rounded-lg bg-white p-5 text-black border-b py-4"
+          tabindex="7"
+        >
+          <div class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left cursor-pointer">
+            <span> Are sponsorships available? </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180 "
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5 transition-all duration-500 group-focus:-rotate-180"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+            Yes, we are currently looking for sponsors. If you are interested in
+            sponsoring Zap, please join our Discord server and contact one of
+            our staff members or use the sponsorship form on our website.
+          </div>
+        </div>
+
+        <div
+          class="group flex flex-col gap-2 rounded-lg bg-white p-5 text-black border-b py-4"
+          tabindex="8"
+        >
+          <div class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180 text-left cursor-pointer">
+            <span> Is cross-trading allowed? </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180 "
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5 transition-all duration-500 group-focus:-rotate-180"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+            No. Cross-trading is not allowed on Zap. Cross trading can be
+            dangerous and is against Roblox's Terms of Service. If you are
+            caught cross-trading, you will be banned from Zap.
+          </div>
+        </div>
       </div>
+
       <div className="flex justify-center gap-4 w-full mt-12">
         <a
           target="_blank"
@@ -432,64 +788,6 @@ export default function FrequentQuestions() {
             <p>Read all</p>
           </div>
         </a>
-      </div>
-      <div class="m-2 space-y-2">
-        <div
-          class="group flex flex-col gap-2 rounded-lg bg-black p-5 text-white"
-          tabindex="1"
-        >
-          <div class="flex cursor-pointer items-center justify-between">
-            <span> HTML </span>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
-              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
-            />
-          </div>
-          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </div>
-
-        <div
-          class="group flex flex-col gap-2 rounded-lg bg-black p-5 text-white"
-          tabindex="2"
-        >
-          <div class="flex cursor-pointer items-center justify-between">
-            <span> CSS </span>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
-              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
-            />
-          </div>
-          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </div>
-
-        <div
-          class="group flex flex-col gap-2 rounded-lg bg-black p-5 text-white"
-          tabindex="3"
-        >
-          <div class="flex cursor-pointer items-center justify-between">
-            <span> JAVASCRIPT </span>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
-              class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
-            />
-          </div>
-          <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </div>
       </div>
     </div>
   );

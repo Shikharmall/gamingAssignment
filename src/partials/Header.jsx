@@ -25,31 +25,25 @@ export default function Header() {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    // Add a scroll event listener to track the scroll position
     const handleScroll = () => {
-      // You can adjust the scroll threshold according to your needs
-      const scrollThreshold = 200;
+      const scrollThreshold = 250;
 
-      // Check if the user has scrolled beyond the threshold
       const isScrolled = window.scrollY > scrollThreshold;
 
-      // Update the state to show/hide the button
       setShowButton(isScrolled);
     };
 
-    // Attach the event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Empty dependency array to ensure the effect runs only once on mount
+  }, []);
 
   const moveTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // for smooth scrolling
+      behavior: "smooth",
     });
   };
 
